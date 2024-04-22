@@ -1,0 +1,103 @@
+/* switch the default font for the body, and remove top/bottom/left/right margin */
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+body {
+  font-family: "Fresca", sans-serif;
+  margin: 0;
+  background-color: #ece5ff;
+}
+#maze{
+  font-family: "Neucha",cursive;
+  z-index: -1;
+  text-align: center;
+ font-size: 35pt;
+  color: hsl(255, 100%, 59%);
+ font-weight: bold;
+ font-style: italic;
+ margin-left: 15px;
+}
+#brain_maze{
+ max-width: auto;
+ max-height: auto;
+ width: 100px;
+ height: auto;
+ display: flex;
+}
+/* font, color, and alignment for the titles of the three displayable regions */
+h3 {
+  background-color:  #c9bcec;
+  color: hsl(291, 43%, 39%);
+  font-size: 20pt;
+  height: 42px;
+  text-align: center;
+}
+
+/* Make the button for adding a idea hover in the top right */
+#showFormButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: hsl(0, 0%, 0%);;
+  background-color: hsl(314, 100%, 94%);
+}
+
+/* The main screen table should have some space to the left */
+#messageList {
+  margin-left: 15px;
+}
+
+/* The table should be wider than it absolutely needs to be */
+table {
+  width: auto;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+/* alternate color of table rows */
+tr:nth-child(even) {
+  background-color: rgb(226, 203, 245);
+}
+tr:nth-child(odd) {
+  background-color: rgb(250, 221, 234);
+}
+/* make table row height a bit bigger than necessary */
+tr {
+  height: 15px;
+}
+/* id */
+td:first-child {
+  width: 5%;
+}
+
+
+
+
+/* make the form elements wide, and force a line break after each */
+input, label, textarea {
+  display: block;
+  width: 200px;
+}
+
+/* put some space between textareas and the buttons that follow them */
+textarea {
+  display: center;
+  margin-bottom: 5px;
+}
+
+/* put some left space before form elements */
+label, input, textarea, #addButton, #editButton #editLikes{
+  margin-left: 15px;
+}
+
+/* custom formatting for the span where we put the creation date */
+#editCreated {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 15px;
+}
+/* 
+#editLike
+{
+  margin-left: 15px;
+  background-color: purple;
+  color: white;
+} */

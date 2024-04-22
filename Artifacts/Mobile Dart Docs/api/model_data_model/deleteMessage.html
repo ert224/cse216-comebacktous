@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the deleteMessage function from the data_model library, for the Dart programming language.">
+  <title>deleteMessage function - data_model library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">flutter_application_1</a></li>
+    <li><a href="../model_data_model/model_data_model-library.html">data_model</a></li>
+    <li class="self-crumb">deleteMessage function</li>
+  </ol>
+  <div class="self-name">deleteMessage</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-function">deleteMessage</span> function 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    <section class="multi-line-signature">
+        
+
+<span class="returntype">void</span>
+<span class="name ">deleteMessage</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="deleteMessage-param-m"><span class="type-annotation"><a href="../model_data_model/MessageData-class.html">MessageData</a></span> <span class="parameter-name">m</span></span></li>
+</ol>)
+
+    </section>
+    
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">void deleteMessage(MessageData m) async {
+  int deleteID = m.id;
+  final response = await http.delete(
+      Uri.parse(&#39;https:&#47;&#47;dry-wave-47246.herokuapp.com&#47;ideas&#47;${deleteID}&#39;));
+
+  if (response.statusCode == 200) {
+    &#47;&#47; If the server did return a 200 OK response,
+    &#47;&#47; then parse the JSON.
+    return;
+  } else {
+    &#47;&#47; If the server did not return a 200 OK response,
+    &#47;&#47; then throw an exception.
+    print(response.statusCode);
+    throw Exception(&#39;Failed to delete.&#39;);
+  }
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">flutter_application_1</a></li>
+  <li><a href="../model_data_model/model_data_model-library.html">data_model</a></li>
+  <li class="self-crumb">deleteMessage function</li>
+</ol>
+
+
+    <h5>data_model library</h5>
+    <ol>
+  <li class="section-title"><a href="../model_data_model/model_data_model-library.html#classes">Classes</a></li>
+  <li><a href="../model_data_model/MessageData-class.html">MessageData</a></li>
+
+
+
+
+
+  <li class="section-title"><a href="../model_data_model/model_data_model-library.html#functions">Functions</a></li>
+  <li><a href="../model_data_model/deleteMessage.html">deleteMessage</a></li>
+  <li><a href="../model_data_model/fetchMessageData.html">fetchMessageData</a></li>
+  <li><a href="../model_data_model/postUserMessage.html">postUserMessage</a></li>
+  <li><a href="../model_data_model/updateLikes.html">updateLikes</a></li>
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    flutter_application_1
+      1.0.0+1
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
